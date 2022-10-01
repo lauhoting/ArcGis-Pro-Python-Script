@@ -1,17 +1,22 @@
 import arcpy
-import os
 
-CEH_File = arcpy.GetParameterAsText(0) #r"E:\Previsico\WY\Catseed"
+#Catseed/Elev_cm/Hydrodem Folder Directory
+CEH_File = arcpy.GetParameterAsText(0)
 
-Output_Folder = arcpy.GetParameterAsText(1) #r"E:\Previsico\WY\Combined_CEH\New_Catseed"
+#Output Folder Directory
+Output_Folder = arcpy.GetParameterAsText(1)
 
-State = arcpy.GetParameterAsText(2) #WY
+#State Abbreviation
+State = arcpy.GetParameterAsText(2)
 
-StateShape = arcpy.GetParameterAsText(3) #r"E:\Previsico\WY\WY_Boundary\WY.shp"
+#State Shapefile Directory
+StateShape = arcpy.GetParameterAsText(3)
 
-OutputName = arcpy.GetParameterAsText(4) #"WY_Catseed.tif"
+#Desired Output File Name
+OutputName = arcpy.GetParameterAsText(4)
 
-CEH_Type = arcpy.GetParameterAsText(5) #Catseed/Elev_cm/Hydrodem
+#Type of Data(Catseed, Elev_cm/Hydrodem)
+CEH_Type = arcpy.GetParameterAsText(5)
 
 arcpy.env.workspace = CEH_File
 
